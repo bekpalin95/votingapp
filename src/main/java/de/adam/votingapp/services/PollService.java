@@ -4,7 +4,6 @@ import de.adam.votingapp.model.Poll;
 import de.adam.votingapp.repositories.PollRepository;
 import java.util.List;
 import java.util.Optional;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
