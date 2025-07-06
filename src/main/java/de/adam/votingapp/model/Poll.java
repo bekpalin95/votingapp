@@ -23,7 +23,5 @@ public class Poll {
   private List<String> options = new ArrayList<>();
 
   @ElementCollection
-  private List<String> votes = new ArrayList<>();
-
-
+  private List<Long> votes = new ArrayList<>();
 }
