@@ -36,10 +36,7 @@ The project emphasizes simplicity, usability, and full-stack best practices.
 - **Frontend Engineering:** Crafted a dynamic, responsive UI in Angular; component-driven architecture; state management.
 - **Backend Development:** Built robust REST APIs with Spring Boot; implemented business logic, validation, and data persistence.
 - **API Design:** Designed RESTful endpoints for poll management and voting.
-- **Database Integration:** (Add specifics about ORM/DB if used)
-- **Authentication & Security:** (Add details if implemented, e.g., JWT, OAuth2)
-- **Testing:** (Add details if tests were written, e.g., Unit Testing with JUnit/Karma)
-- **Deployment:** (Add deployment details if hosted)
+- **Database Integration:** Spring Data JPA
 - **Version Control:** Managed development using Git and GitHub best practices.
 
 
