@@ -1,6 +1,6 @@
 # Voting App - Full Stack Project (Angular, Spring Boot)
 
-A simple and intuitive voting application where users can create polls and vote on them. This full-stack project was designed and developed solely by me as a portfolio piece to demonstrate expertise in modern web development, scalable backend architecture, and clean UI design.
+A simple and intuitive voting application where users can create polls and vote on them. This full-stack project was designed and developed as a portfolio piece to demonstrate expertise in modern web development, scalable backend architecture, and clean UI design.
 
 ## 🚀 Overview
 
