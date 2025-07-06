@@ -3,7 +3,9 @@ package de.adam.votingapp.controllers;
 import de.adam.votingapp.model.Poll;
 import de.adam.votingapp.services.PollService;
 import java.util.List;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,5 +29,12 @@ public class PollController {
   @GetMapping
   public List<Poll> getAllPolls() {
     return pollService.getAllPolls();
+  }
+
+  @GetMapping("/{id}")
+  public ResponseEntity<Poll> getPoll(@PathVariable Long id) {
+    return pollService.getPollById(id)
+        .map(ResponseEntity::ok)
+        .orElse(ResponseEntity.notFound().build());
   }
 }
