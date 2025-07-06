@@ -1,5 +1,6 @@
 package de.adam.votingapp.controllers;
 
+import de.adam.votingapp.dto.Vote;
 import de.adam.votingapp.model.Poll;
 import de.adam.votingapp.services.PollService;
 import java.util.List;
@@ -36,5 +37,10 @@ public class PollController {
     return pollService.getPollById(id)
         .map(ResponseEntity::ok)
         .orElse(ResponseEntity.notFound().build());
+  }
+
+  @PostMapping("/vote")
+  public void vote(@RequestBody Vote vote) {
+    pollService.vote(vote.getPollId(), vote.getOptionIndex());
   }
 }
