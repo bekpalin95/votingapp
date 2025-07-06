@@ -49,7 +49,7 @@ export class PollComponent implements OnInit{
         this.resetPoll();
       },
       error: (error) => {
-        console.error("Error fetching polls: ", error);
+        console.error("Error creating polls: ", error);
       }
     });
   }
@@ -62,7 +62,21 @@ export class PollComponent implements OnInit{
         { optionText: '', voteCount: 0},
         { optionText: '', voteCount: 0}
       ]
+    }
   }
+
+  vote(pollId: number, optionIndex: number) {
+    this.pollService.vote(pollId, optionIndex).subscribe({
+      next: () => {
+        const poll = this.polls.find(p => p.id === pollId);
+        if(poll) {
+          poll.options[optionIndex].voteCount++;
+        }
+      },
+      error: (error) => {
+        console.error("Error voting on the poll: ", error);
+      }
+    });
   }
 
   trackByIndex(index: number): number {
